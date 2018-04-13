@@ -2,23 +2,29 @@
 $( document ).ready(function() {
   // Function expands the menu items.
   function expand(){
+
+    $('li').toggleClass('open');
     // Expand Li Animate
     $(".b, .c").animate({
       top:"400px"
-    },{duration:1000, queue: false });
+    },{duration:900, queue: false });
     $( "li:not(#main)" ).animate({
       opacity:"1"
     }, {duration: 1000, queue: false});
-    $('li').toggleClass('open');
     return this;
   };
 
   // Function collapses the menu items.
   function collapse(){
+    $('li').toggleClass('open');
     // Collapse Li Animate
       $(".b, .c").animate({
-        top:"-400pxpx"
-      },{duration:300, queue: false });
+        top:"20%"
+      },{duration:900, queue: false });
+      $( "li:not(#main)" ).animate({
+        opacity:"0"
+      }, {duration: 1000, queue: false});
+
       return this;
   };
 
@@ -29,10 +35,7 @@ $( document ).ready(function() {
       expand(); // Expand Li Animate
       $toggle = 1;
     }else{
-      $('li').toggleClass('open');
-      $( "li:not(#main)" ).animate({
-        opacity:"0"
-      }, {duration: 1000, queue: false});
+      collapse(); // Collapse Li Animate
       $toggle = 0;
     };
   });
