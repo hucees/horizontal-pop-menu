@@ -37,4 +37,4 @@ On second click menu collapses to main button and repeats function.
 |Prerequisite                                | Version |
 |--------------------------------------------|---------|
 |Bootstrap                                   |  3.3.7  |
-|JQuery                                      |  3.3.1  |
+|JQuery                                      |  3.2.1  |
